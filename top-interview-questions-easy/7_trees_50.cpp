@@ -21,11 +21,8 @@ public:
 
             vector<int> x;
             while(!q.empty()) {
-
                 tmp = q.front();
-
                 x.push_back(tmp->val);
-
                 if(tmp->left) p.push(tmp->left);
                 if(tmp->right) p.push(tmp->right);
                 q.pop();
@@ -35,11 +32,8 @@ public:
 
             vector<int> xs;
             while(!p.empty()) {
-
                 tmp = p.front();
-
                 xs.push_back(tmp->val);
-
                 if(tmp->left) q.push(tmp->left);
                 if(tmp->right) q.push(tmp->right);
                 p.pop();
@@ -47,10 +41,8 @@ public:
 
             if(xs.size() != 0)
                 xx.push_back(xs);
-
         }
 
         return xx;
-
     }
 };
